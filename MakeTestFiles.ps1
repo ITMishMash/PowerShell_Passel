@@ -1,6 +1,7 @@
 #Used for creating test files on an interval currently set to one second
 #Will create an empty text file for testing file transfers, folder watching, etc. scripts
 #TO DO: Create and handle limiting the number of iterations
+#TO DO: Add ability to write content to files of set and random sizes
 
 $destFolder = 'C:\DestinationFolder\'   #Destination folder of empty files
 $timeInterval = 1                       #In seconds
