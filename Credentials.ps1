@@ -20,5 +20,7 @@ Function GetStoredCredential($userName, $pathToCredFile)
   {
   #Set variable equal to the GetStoredCredential function 
   $encryptedPasscodeFile = Get-Content $pathToCredFile | ConvertTo-SecureString
-  New-Object System.Net.NetworkCredential($userName, $encryptedPasscodeFile); 
+  New-Object System.Net.NetworkCredential($userName, $encryptedPasscodeFile)
+  #This has also been used
+  #New-Object System.Management.Automation.PsCredential($userName, $encryptedPasscodeFile)
   }
