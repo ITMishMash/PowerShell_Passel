@@ -4,7 +4,7 @@
 #Comment out the if ((($proc.ProcessName -eq "obclnt.exe") and ending brace if not required.
 
 $process = "wscript.exe", "cscript.exe", "obclnt32.exe", "powershell.exe"
-$procJobs = (Get-WmiObject win32_process | where{If($process. -match '$_.ProcessName'){$TRUE}}) 
+$procJobs = (Get-WmiObject win32_process | where{If($process -match '$_.ProcessName'){$TRUE}}) 
 $numJobs = ($procJobs | Measure-Object).count
 if ($numJobs -gt 0) {
   foreach ($proc in $procJobs) {
