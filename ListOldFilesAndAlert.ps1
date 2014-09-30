@@ -54,7 +54,7 @@ Function CheckFolderDates {
             #Write-Host $file.Name
             if ($file.CreationTime -lt ((Get-Date).AddDays(-$myDays).AddHours(-$myHours).AddMinutes(-$myMinutes)))
             {
-                $Global:fileResults += "<tr>"+($file.FullName)+"<td></td><td>"+$file.CreationTime+"</td></tr>"
+                $Global:fileResults += "<tr><td>"+($file.FullName)+"</td><td>"+$file.CreationTime+"</td></tr>"
                 Write-Host ($file.FullName).padright(150) $file.CreationTime
                 $Global:numFiles += 1
             }
