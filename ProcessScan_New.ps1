@@ -41,13 +41,13 @@ if ($numJobs -gt 0) {
     #}
   }
   $colProcesses | Sort-Object `
-    {switch ($sortVal) {
+    $(switch ($sortVal) {
         0 {'ProcessID'}
         1 {'ProcessName'}
         2 {'CreationDate'}
         3 {'ProcessID'}
         4 {'User'}
-    }} | `
+    }) | `
     Format-Table -auto | `
     Out-File $fileOutput -Encoding "Default" -Append
 }
