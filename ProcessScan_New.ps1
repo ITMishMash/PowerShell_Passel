@@ -48,7 +48,7 @@ if ($numJobs -gt 0) {
         3 {'ProcessID'}
         4 {'User'}
     }) | `
-    Format-Table -auto | `
+    #Format-Table -auto | `
     Out-File $fileOutput -Encoding "Default" -Append
 }
 Write-Host "$numJobs jobs found..."
