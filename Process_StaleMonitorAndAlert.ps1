@@ -71,7 +71,7 @@ $numJobs
 $oldJobs
 if ($oldJobs -gt 0) {
     $mailFrom = "email@email.com" 
-    $mailTo= email@email.com", "anotheremail@email.com"
+    $mailTo= "email@email.com", "anotheremail@email.com"
 
     $msgSubject =  "$oldJobs jobs older than $timeToStale minutes found on $([System.Net.Dns]::GetHostName())"
 
